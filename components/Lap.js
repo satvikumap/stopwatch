@@ -14,9 +14,9 @@ export default function Lap({ results }) {
       centiseconds = 0;
     }
 
-    let milliseconds = centiseconds % 100;
-    seconds = Math.floor(centiseconds / 100) % 60;
-    minutes = Math.floor(centiseconds / 6000);
+    milliseconds = Math.floor(centiseconds / 100) % 60;
+    seconds = Math.floor(centiseconds / 6000);
+    minutes = Math.floor(centiseconds / 60000);
 
     return {
       minutes: padToTwo(minutes),
